@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".penalty.AddFragment">
+
+    <data>
+        <variable
+            name="myViewModel"
+            type="com.example.safesite.penalty.viewmodel.AddPenaltyViewModel" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/darkBlue">
+
+        <EditText
+            android:id="@+id/editDate"
+            android:layout_width="318dp"
+            android:layout_height="57dp"
+            android:layout_marginStart="46dp"
+            android:layout_marginTop="49dp"
+            android:layout_marginEnd="47dp"
+            android:background="@drawable/round_border"
+            android:ems="10"
+
+            android:hint="@string/date_of_penalty"
+            android:inputType="textPersonName"
+            android:minHeight="48dp"
+            android:padding="16dp"
+
+            android:text="@={myViewModel.penaltyDate}"
+            android:textColor="@color/skinTone"
+            android:textColorHint="@color/lightYellow"
+            android:textSize="18sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView8" />
+
+        <EditText
+            android:id="@+id/editTime"
+            android:layout_width="318dp"
+            android:layout_height="53dp"
+            android:layout_marginStart="46dp"
+            android:layout_marginTop="24dp"
+
+            android:layout_marginEnd="47dp"
+
+            android:background="@drawable/round_border"
+            android:ems="10"
+            android:hint="@string/add_fine_amount"
+            android:inputType="textPersonName"
+            android:minHeight="48dp"
+            android:padding="16dp"
+
+            android:text="@={myViewModel.penaltyAmount}"
+            android:textColor="@color/skinTone"
+            android:textColorHint="@color/lightYellow"
+            android:textSize="18sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/editDate" />
+
+        <EditText
+            android:id="@+id/editBpm"
+            android:layout_width="318dp"
+            android:layout_height="53dp"
+            android:layout_marginStart="46dp"
+            android:layout_marginTop="29dp"
+
+            android:layout_marginEnd="47dp"
+            android:background="@drawable/round_border"
+            android:ems="10"
+            android:hint="@string/penalty_desc_enter"
+            android:inputType="textPersonName"
+            android:minHeight="48dp"
+            android:padding="16dp"
+
+            android:text="@={myViewModel.penaltyDesc}"
+            android:textColor="@color/skinTone"
+            android:textColorHint="@color/lightYellow"
+            android:textSize="18sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/editTime" />
+
+        <Button
+            android:id="@+id/btnSave"
+            android:layout_width="315dp"
+            android:layout_height="52dp"
+            android:layout_marginStart="46dp"
+            android:layout_marginTop="71dp"
+            android:layout_marginEnd="50dp"
+            android:onClick="@{()->myViewModel.save()}"
+            android:text="@string/save_penalty"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/editBpm" />
+
+        <TextView
+            android:id="@+id/textView8"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="57dp"
+            android:layout_marginTop="91dp"
+            android:layout_marginEnd="58dp"
+            android:text="@string/penalty_desc_header"
+            android:textColor="@color/lightYellow"
+            android:textSize="45sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

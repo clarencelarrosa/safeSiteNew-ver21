@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/date_item_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/test_name"
+        android:textColor="@color/darkBlue"
+        android:textSize="25sp"
+        android:textStyle="bold"
+        android:paddingStart="5sp"
+        android:paddingLeft="5sp"
+        android:paddingRight="5sp"
+        android:paddingEnd="5sp" />
+
+    <TextView
+        android:id="@+id/date_item_size"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/test_attendance_quantity"
+        android:textColor="@color/darkOrange"
+        android:textSize="15sp"
+        android:textStyle="italic"
+        android:paddingStart="5sp"
+        android:paddingLeft="5sp"
+        android:paddingRight="5sp"
+        android:paddingEnd="5sp" />
+</LinearLayout>

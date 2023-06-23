@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_home"
+            android:icon="@drawable/ic_home"
+            android:title="@string/menu_home" />
+
+        <item
+            android:id="@+id/attendanceMainActivity"
+            android:icon="@drawable/ic_attendance"
+            android:title="Attendance"/>
+
+        <item
+            android:id="@+id/penaltyFragment"
+            android:icon="@drawable/ic_money"
+            android:title="Penalty List"/>
+
+        <item
+            android:id="@+id/locationActivity"
+            android:icon="@drawable/ic_location"
+            android:title="@string/location"/>
+        <!--
+                <item
+                    android:id="@+id/quizMainActivity2"
+                    android:icon="@drawable/ic_quiz"
+                    android:title="@string/ppe_assessment"/>
+        -->
+<!--
+        <item
+            android:id="@+id/todoMainActivity"
+            android:icon="@drawable/ic_todo"
+            android:title="@string/to_do"/>
+            -->
+        <!--
+        <item
+            android:id="@+id/violationMainActivity"
+            android:icon="@drawable/ic_money"
+            android:title="Violation"/>
+            -->
+
+
+<!--
+        <item
+            android:id="@+id/nav_slideshow"
+            android:icon="@drawable/ic_menu_slideshow"
+            android:title="@string/menu_slideshow" />
+-->
+        <item
+            android:id="@+id/faqFragment2"
+            android:icon="@drawable/ic_faq"
+            android:title="@string/faq" />
+
+        <item
+            android:id="@+id/aboutFragment"
+            android:icon="@drawable/ic_about"
+            android:title="@string/about" />
+
+
+        <item android:id="@+id/profileActivity"
+            android:icon="@drawable/ic_logout"
+            android:title="@string/logout"/>
+
+
+        <!--
+        <item android:id="@+id/profileFragment"
+            android:icon="@drawable/ic_profile"
+            android:title="Profile"/>
+            -->
+
+<!--
+        <item android:id="@+id/logout"
+            android:icon="@drawable/ic_logout"
+            android:title="Logout"/>
+-->
+    </group>
+</menu>

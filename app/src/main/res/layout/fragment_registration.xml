@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".RegistrationFragment">
+
+    <data>
+        <variable
+            name="myViewModel"
+            type="com.example.safesite.model.AddViewModel" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/titleConstraint"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/skinTone">
+
+        <ImageView
+            android:id="@+id/imageView5"
+            android:layout_width="187dp"
+            android:layout_height="134dp"
+            android:layout_marginStart="103dp"
+            android:layout_marginTop="34dp"
+            android:src="@drawable/orange2"
+            app:layout_constraintStart_toStartOf="@+id/topText"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/topText"
+            android:layout_width="212dp"
+            android:layout_height="119dp"
+            android:layout_marginStart="38dp"
+            android:layout_marginTop="39dp"
+            android:text="@string/create_account"
+            android:textColor="@color/black"
+            android:textSize="45sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toStartOf="@+id/imageView9"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/imageView5" />
+
+        <EditText
+            android:id="@+id/regFirstname"
+            android:layout_width="334dp"
+            android:layout_height="59dp"
+            android:layout_marginStart="36dp"
+            android:layout_marginTop="50dp"
+            android:layout_marginEnd="41dp"
+            android:background="@drawable/round_border"
+            android:drawableStart="@drawable/ic_name"
+            android:drawablePadding="16dp"
+            android:ems="10"
+            android:hint="@string/first_name"
+            android:inputType="textPersonName"
+
+            android:minHeight="48dp"
+            android:padding="16dp"
+            android:text="@={myViewModel.firstName}"
+            android:textColor="@color/darkBlue"
+            android:textColorHint="@color/lightOrange"
+            android:textSize="18sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/topText" />
+
+        <EditText
+            android:id="@+id/regLastname"
+            android:layout_width="335dp"
+            android:layout_height="57dp"
+            android:layout_marginStart="35dp"
+            android:layout_marginTop="22dp"
+            android:layout_marginEnd="41dp"
+            android:background="@drawable/round_border"
+            android:drawableStart="@drawable/ic_name"
+            android:drawablePadding="16dp"
+            android:ems="10"
+            android:hint="@string/last_name"
+            android:inputType="textPersonName"
+            android:minHeight="48dp"
+            android:padding="16dp"
+            android:text="@={myViewModel.lastName}"
+
+            android:textColor="@color/darkBlue"
+            android:textColorHint="@color/lightOrange"
+            android:textSize="18sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/regFirstname" />
+
+        <EditText
+            android:id="@+id/regUsername"
+            android:layout_width="335dp"
+            android:layout_height="59dp"
+            android:layout_marginStart="35dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="41dp"
+            android:background="@drawable/round_border"
+            android:drawableStart="@drawable/ic_baseline_person_24"
+            android:drawablePadding="16dp"
+            android:ems="10"
+            android:hint="@string/username"
+            android:inputType="textPersonName"
+            android:minHeight="48dp"
+            android:padding="16dp"
+            android:text="@={myViewModel.username}"
+            android:textColor="@color/darkBlue"
+            android:textColorHint="@color/lightOrange"
+            android:textSize="18sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/regLastname" />
+
+        <EditText
+            android:id="@+id/regPassword"
+            android:layout_width="335dp"
+            android:layout_height="59dp"
+            android:layout_marginStart="38dp"
+            android:layout_marginTop="19dp"
+            android:layout_marginEnd="38dp"
+            android:background="@drawable/round_border"
+            android:drawableStart="@drawable/ic_lock"
+            android:drawablePadding="16dp"
+            android:ems="10"
+            android:hint="@string/prompt_password"
+            android:inputType="textPassword"
+            android:minHeight="48dp"
+            android:padding="16dp"
+            android:text="@={myViewModel.password}"
+            android:textColor="@color/darkBlue"
+            android:textColorHint="@color/lightOrange"
+            android:textSize="18sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/regUsername" />
+
+        <Button
+            android:id="@+id/submitButton"
+            android:layout_width="334dp"
+            android:layout_height="58dp"
+            android:layout_marginStart="38dp"
+            android:layout_marginTop="32dp"
+            android:layout_marginEnd="39dp"
+            android:background="@drawable/round_bg"
+            android:drawableEnd="@drawable/ic_baseline_arrow_circle_right_24"
+            android:onClick="@{()->myViewModel.submitButton()}"
+            android:padding="4dp"
+            android:text="@string/registerBtn"
+            android:textColor="@color/black"
+            android:textColorHighlight="#664564"
+            android:textColorHint="#664564"
+            android:textColorLink="#664564"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/regPassword" />
+
+        <ImageView
+            android:id="@+id/imageView9"
+            android:layout_width="150dp"
+            android:layout_height="172dp"
+            android:layout_marginEnd="11dp"
+            android:src="@drawable/orangecirclebackground"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toEndOf="@+id/topText"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>

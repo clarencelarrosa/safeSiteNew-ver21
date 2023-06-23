@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Safe Site -->
+    <color name="colorPrimary">#ffd700</color>
+    <color name="colorPrimaryDark">#00574B</color>
+    <color name="colorAccent">#E31B85</color>
+    <color name="colorDayT">#ffff7a</color>
+    <color name="colorDayB">#a0e6ff</color>
+    <color name="black">#000000</color>
+    <color name="upArrow">#ddffca</color>
+    <color name="downArrow">#ffbdff</color>
+    <color name="bgColor">#f7f5bc</color>
+    <color name="bgAnswer">#f2f2f2</color>
+    <color name="purple_200">#FFBB86FC</color>
+    <color name="purple_500">#FFD700</color>
+    <color name="purple_700">#FF3700B3</color>
+    <color name="teal_200">#FF03DAC5</color>
+    <color name="teal_700">#FF018786</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="yellow">#FFD700</color>
+
+    <color name="primary">#18023B</color>
+    <color name="secondary">#FF03DAC5</color>
+
+    <color name="night_mode">#6124B1</color>
+    <color name="notifications">#13B2C3</color>
+    <color name="private_account">#E6A326</color>
+    <color name="security">#D95F69</color>
+
+    <color name="red">#E57373</color>
+    <color name="blue">#64B5F6</color>
+    <color name="indigo">#5C6BC0</color>
+    <color name="purple">#BA68C8</color>
+    <color name="pink">#F06292</color>
+    <color name="green">#81C784</color>
+
+    <color name="orange">#FFB74D</color>
+    <color name="brown">#A1887F</color>
+    <color name="teal">#26A69A</color>
+
+    <integer-array name="cardColors">
+        <item>@color/blue</item>
+        <item>@color/green</item>
+        <item>@color/yellow</item>
+        <item>@color/red</item>
+        <item>@color/purple</item>
+        <item>@color/orange</item>
+        <item>@color/pink</item>
+        <item>@color/teal</item>
+        <item>@color/indigo</item>
+        <item>@color/brown</item>
+    </integer-array>
+
+
+    <!--Mobile app colors-->
+    <color name="lightYellow">#F4D35E</color>
+    <color name="blackTheme">#050404</color>
+    <color name="darkBlue">#0D3B66</color>
+    <color name="skinTone">#FAF0CA</color>
+    <color name="lightOrange">#EE964B</color>
+    <color name="darkOrange">#F95738</color>
+
+    <!-- Icons -->
+    <color name="icon_active_dark">#8A000000</color>     <!-- 54% - Dark icon in active state -->
+    <color name="icon_active_light">#FFFFFF</color>      <!-- 100% - Light icon in active state -->
+    <color name="icon_inactive_dark">#61000000</color>   <!-- 38% - Dark icon in inactive state -->
+    <color name="icon_inactive_light">#80FFFFFF</color>  <!-- 38% - Light icon in inactive state -->
+
+</resources>

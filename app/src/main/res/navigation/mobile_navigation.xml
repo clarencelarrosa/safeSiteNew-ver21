@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/loginFragment">
+
+    <fragment
+        android:id="@+id/nav_home"
+        android:name="com.example.safesite.home.HomeFragment"
+        android:label="@string/menu_home"
+        tools:layout="@layout/fragment_home" >
+        <action
+            android:id="@+id/action_nav_home_to_penaltyFragment"
+            app:destination="@id/penaltyFragment" />
+        <action
+            android:id="@+id/action_nav_home_self"
+            app:destination="@id/nav_home" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/faqFragment2"
+        android:name="com.example.safesite.faq.FaqFragment"
+        android:label="@string/menu_faq"
+        tools:layout="@layout/fragment_faq" />
+
+    <fragment
+        android:id="@+id/nav_slideshow"
+        android:name="com.example.safesite.slideshow.SlideshowFragment"
+        android:label="@string/menu_slideshow"
+        tools:layout="@layout/fragment_slideshow" />
+    <fragment
+        android:id="@+id/loginFragment"
+        android:name="com.example.safesite.LoginFragment"
+        android:label="fragment_login"
+        tools:layout="@layout/fragment_login" >
+        <action
+            android:id="@+id/action_loginFragment_to_registrationFragment"
+            app:destination="@id/registrationFragment" />
+        <action
+            android:id="@+id/action_loginFragment_to_nav_home"
+            app:destination="@id/nav_home" />
+    </fragment>
+    <fragment
+        android:id="@+id/registrationFragment"
+        android:name="com.example.safesite.RegistrationFragment"
+        android:label="fragment_registration"
+        tools:layout="@layout/fragment_registration" >
+        <action
+            android:id="@+id/action_registrationFragment_to_loginFragment"
+            app:destination="@id/loginFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/aboutFragment"
+        android:name="com.example.safesite.about.AboutFragment"
+        android:label="fragment_about"
+        tools:layout="@layout/fragment_about" />
+    <activity
+        android:id="@+id/locationActivity"
+        android:name="com.example.safesite.location.LocationActivity"
+        android:label="activity_location"
+        tools:layout="@layout/activity_location" />
+    <activity
+        android:id="@+id/quizMainActivity2"
+        android:name="com.example.safesite.ppeAssessment.QuizMainActivity"
+        android:label="activity_quiz_main"
+        tools:layout="@layout/activity_quiz_main" />
+    <activity
+        android:id="@+id/quizQuestionsActivity"
+        android:name="com.example.safesite.ppeAssessment.QuizQuestionsActivity"
+        android:label="activity_quiz_questions"
+        tools:layout="@layout/activity_quiz_questions" />
+    <activity
+        android:id="@+id/resultActivity"
+        android:name="com.example.safesite.ppeAssessment.ResultActivity"
+        android:label="activity_result"
+        tools:layout="@layout/activity_result" />
+    <activity
+        android:id="@+id/profileActivity"
+        android:name="com.example.safesite.profile.ProfileActivity"
+        android:label="activity_profile"
+        tools:layout="@layout/activity_profile" />
+    <activity
+        android:id="@+id/todoMainActivity"
+        android:name="com.example.safesite.todo.TodoMainActivity"
+        android:label="activity_todo_main"
+        tools:layout="@layout/activity_todo_main" />
+    <activity
+        android:id="@+id/addNote"
+        android:name="com.example.safesite.todo.AddToDo"
+        android:label="activity_add_note"
+        tools:layout="@layout/activity_add_note" />
+    <activity
+        android:id="@+id/openNote"
+        android:name="com.example.safesite.todo.OpenToDo"
+        android:label="activity_open_note"
+        tools:layout="@layout/activity_open_note" />
+    <activity
+        android:id="@+id/editNote"
+        android:name="com.example.safesite.todo.EditToDo"
+        android:label="activity_edit_note"
+        tools:layout="@layout/activity_edit_note" />
+    <fragment
+        android:id="@+id/penaltyFragment"
+        android:name="com.example.safesite.penalty.PenaltyFragment"
+        android:label="fragment_heart"
+        tools:layout="@layout/fragment_penalty" >
+        <action
+            android:id="@+id/action_penaltyFragment_to_addFragment2"
+            app:destination="@id/addFragment" />
+        <action
+            android:id="@+id/action_penaltyFragment_to_deleteFragment2"
+            app:destination="@id/deleteFragment" />
+        <action
+            android:id="@+id/action_penaltyFragment_to_updateFragment3"
+            app:destination="@id/updateFragment" />
+        <action
+            android:id="@+id/action_penaltyFragment_to_displayFragment2"
+            app:destination="@id/displayFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/addFragment"
+        android:name="com.example.safesite.penalty.AddFragment"
+        android:label="fragment_add"
+        tools:layout="@layout/fragment_add" />
+    <fragment
+        android:id="@+id/deleteFragment"
+        android:name="com.example.safesite.penalty.DeleteFragment"
+        android:label="fragment_delete"
+        tools:layout="@layout/fragment_delete" />
+    <fragment
+        android:id="@+id/updateFragment"
+        android:name="com.example.safesite.penalty.UpdateFragment"
+        android:label="fragment_update"
+        tools:layout="@layout/fragment_update" />
+    <fragment
+        android:id="@+id/displayFragment"
+        android:name="com.example.safesite.penalty.DisplayFragment"
+        android:label="fragment_display"
+        tools:layout="@layout/fragment_display" />
+    <activity
+        android:id="@+id/attendanceMainActivity"
+        android:name="com.example.safesite.attendance.AttendanceMainActivity"
+        android:label="activity_attendance_main"
+        tools:layout="@layout/activity_attendance_main" />
+    <activity
+        android:id="@+id/editShoppingListActivity2"
+        android:name="com.example.safesite.attendance.EditDateActivity"
+        android:label="activity_edit_shopping_list"
+        tools:layout="@layout/activity_edit_date" />
+
+
+</navigation>

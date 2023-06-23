@@ -1,0 +1,372 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:layout_gravity="center"
+    android:background="@drawable/backgroundblue"
+    android:orientation="vertical"
+    tools:context=".location.LocationActivity"
+>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:text="@string/reminder_location"
+        android:textAlignment="center"
+        android:textColor="@color/colorAccent"
+        android:textSize="18dp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:padding="10dp"
+        android:text="@string/location_button_tap"
+        android:textColor="@color/black"
+
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ProgressBar
+        android:id="@+id/progress_circular"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Hello World!"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <TextView
+        android:id="@+id/textLatLong"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:text="@string/latlong_text"
+        android:textColor="@color/darkBlue"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/spacing_standard_new"
+        android:layout_marginEnd="@dimen/spacing_standard_new"
+        android:layout_marginBottom="@dimen/spacing_standard_new"
+
+        android:background="@color/skinTone"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:paddingStart="@dimen/spacing_standard_new"
+            android:paddingTop="@dimen/spacing_standard"
+            android:paddingEnd="@dimen/spacing_standard_new"
+            android:paddingBottom="@dimen/spacing_standard"
+            android:text="@string/user_address"
+            android:textColor="@color/black" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/divider_width"
+            android:background="@color/purple_200" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="@dimen/spacing_standard">
+
+            <!--
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/spacing_standard"
+                android:layout_marginEnd="@dimen/spacing_standard"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+
+                    android:text="@string/lbl_loca"
+                    android:textColor="@color/black" />
+
+                <TextView
+                    android:id="@+id/textaddress"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+
+                    android:textColor="@color/black" />
+
+            </LinearLayout>
+-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/spacing_standard"
+                android:layout_marginTop="@dimen/spacing_control"
+                android:layout_marginEnd="@dimen/spacing_standard"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+
+                    android:text="@string/lbl_city"
+                    android:textColor="@color/black" />
+
+                <TextView
+                    android:id="@+id/textlocality"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/spacing_control"
+
+                    android:text="@string/ques"
+                    android:textColor="@color/colorPrimary"
+                    tools:ignore="SpeakableTextPresentCheck" />
+
+            </LinearLayout>
+
+            <!--
+                       <LinearLayout
+                           android:layout_width="match_parent"
+                           android:layout_height="wrap_content"
+                           android:layout_marginStart="@dimen/spacing_standard"
+                           android:layout_marginTop="@dimen/spacing_standard"
+                           android:layout_marginEnd="@dimen/spacing_standard"
+                           android:layout_marginBottom="@dimen/spacing_control"
+                           android:orientation="horizontal">
+
+                           <TextView
+                               android:layout_width="wrap_content"
+                               android:layout_height="match_parent"
+                               android:layout_gravity="center_vertical"
+                               android:layout_marginTop="0dp"
+
+                               android:gravity="center_vertical"
+                               android:text="@string/lbl_state"
+                               android:textColor="@color/black" />
+
+                           <TextView
+                               android:id="@+id/textstate"
+                               android:layout_width="wrap_content"
+                               android:layout_height="wrap_content"
+                               android:layout_marginStart="@dimen/spacing_control"
+                               android:layout_marginTop="0dp"
+
+                               android:text="@string/ques"
+                               android:textColor="@color/colorPrimary"
+                               android:textSize="15dp"
+                               tools:text="$50" />
+
+                       </LinearLayout>
+           -->
+                       <LinearLayout
+                           android:layout_width="match_parent"
+                           android:layout_height="wrap_content"
+                           android:layout_marginStart="@dimen/spacing_standard"
+                           android:layout_marginTop="@dimen/spacing_standard"
+                           android:layout_marginEnd="@dimen/spacing_standard"
+                           android:layout_marginBottom="@dimen/spacing_control"
+                           android:orientation="horizontal">
+
+                           <TextView
+                               android:layout_width="wrap_content"
+                               android:layout_height="match_parent"
+                               android:layout_gravity="center_vertical"
+                               android:layout_marginTop="0dp"
+
+                               android:gravity="center_vertical"
+                               android:text="@string/country"
+                               android:textColor="@color/black" />
+
+                           <TextView
+                               android:id="@+id/textcountry"
+                               android:layout_width="wrap_content"
+                               android:layout_height="wrap_content"
+                               android:layout_marginStart="@dimen/spacing_control"
+                               android:layout_marginTop="0dp"
+
+                               android:text="@string/ques"
+                               android:textColor="@color/colorPrimary"
+                               android:textSize="15dp"
+                               tools:text="$50" />
+
+                       </LinearLayout>
+           <!--
+                       <LinearLayout
+                           android:layout_width="match_parent"
+                           android:layout_height="wrap_content"
+                           android:layout_marginStart="@dimen/spacing_standard"
+                           android:layout_marginTop="@dimen/spacing_standard"
+                           android:layout_marginEnd="@dimen/spacing_standard"
+                           android:layout_marginBottom="@dimen/spacing_control"
+                           android:orientation="horizontal">
+
+                           <TextView
+                               android:layout_width="wrap_content"
+                               android:layout_height="match_parent"
+                               android:layout_gravity="center_vertical"
+                               android:layout_marginTop="0dp"
+
+                               android:gravity="center_vertical"
+                               android:text="@string/pincode"
+                               android:textColor="@color/black" />
+
+                           <TextView
+                               android:id="@+id/textcode"
+                               android:layout_width="wrap_content"
+                               android:layout_height="wrap_content"
+                               android:layout_marginStart="@dimen/spacing_control"
+                               android:layout_marginTop="0dp"
+
+                               android:text="@string/ques"
+                               android:textColor="@color/colorPrimary"
+                               android:textSize="15dp"
+                               tools:text="$50" />
+
+                       </LinearLayout>
+           -->
+                       <LinearLayout
+                           android:layout_width="match_parent"
+                           android:layout_height="wrap_content"
+                           android:layout_marginStart="@dimen/spacing_standard"
+                           android:layout_marginTop="@dimen/spacing_standard"
+                           android:layout_marginEnd="@dimen/spacing_standard"
+                           android:layout_marginBottom="@dimen/spacing_control"
+                           android:orientation="horizontal">
+
+                           <TextView
+                               android:layout_width="wrap_content"
+                               android:layout_height="match_parent"
+                               android:layout_gravity="center_vertical"
+                               android:layout_marginTop="0dp"
+
+                               android:gravity="center_vertical"
+                               android:text="@string/dictrict"
+                               android:textColor="@color/black" />
+
+                           <TextView
+                               android:id="@+id/textdistrict"
+                               android:layout_width="wrap_content"
+                               android:layout_height="wrap_content"
+                               android:layout_marginStart="@dimen/spacing_control"
+                               android:layout_marginTop="0dp"
+
+                               android:text="@string/ques"
+                               android:textColor="@color/colorPrimary"
+                               android:textSize="15dp"
+                               tools:text="$50" />
+
+                       </LinearLayout>
+                   </LinearLayout>
+               </LinearLayout>
+
+
+               <LinearLayout
+                   android:layout_width="match_parent"
+                   android:layout_height="wrap_content"
+                   android:layout_marginStart="@dimen/spacing_standard"
+                   android:layout_marginTop="@dimen/spacing_standard"
+                   android:layout_marginEnd="@dimen/spacing_standard"
+                   android:layout_marginBottom="@dimen/spacing_control"
+                   android:orientation="horizontal">
+
+                   <TextView
+                       android:layout_width="wrap_content"
+                       android:layout_height="match_parent"
+                       android:layout_gravity="center_vertical"
+                       android:layout_marginTop="0dp"
+
+                       android:textSize="20sp"
+                       android:gravity="center_vertical"
+                       android:text="MapView :"
+                       android:layout_marginStart="15dp"
+                       android:textColor="@color/darkOrange" />
+
+
+               </LinearLayout>
+
+               <!--
+                   <androidx.constraintlayout.widget.ConstraintLayout
+                       android:layout_width="match_parent"
+                       android:layout_height="match_parent"
+                       tools:context=".location.LocationActivity">
+
+                       <TextView
+                           android:id="@+id/location_input"
+                           android:layout_width="392dp"
+                           android:layout_height="118dp"
+                           android:layout_marginStart="3dp"
+                           android:layout_marginTop="198dp"
+                           android:layout_marginEnd="16dp"
+                           android:gravity="center"
+                           android:textColor="@color/black"
+                           android:textSize="20dp"
+                           app:layout_constraintEnd_toEndOf="parent"
+                           app:layout_constraintStart_toStartOf="parent"
+                           app:layout_constraintTop_toTopOf="parent" />
+
+                       <Button
+                           android:id="@+id/fetch_location"
+                           android:layout_width="wrap_content"
+                           android:layout_height="wrap_content"
+                           android:layout_marginStart="133dp"
+                           android:layout_marginTop="67dp"
+                           android:layout_marginEnd="134dp"
+                           android:text="@string/get_location"
+                           app:layout_constraintEnd_toEndOf="parent"
+                           app:layout_constraintStart_toStartOf="parent"
+                           app:layout_constraintTop_toBottomOf="@+id/location_input" />
+
+                   </androidx.constraintlayout.widget.ConstraintLayout>
+                   -->
+<!--
+       //start of 2nd version
+    <TextView
+        android:id="@+id/tv_current_location"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        android:layout_marginBottom="20dp"
+        android:gravity="center"
+        android:lines="3"
+        android:text="@string/click_the_button_to_start"
+        android:textAppearance="@style/TextAppearance.MaterialComponents.Headline5"
+        app:layout_constraintBottom_toTopOf="@+id/btn_current_location"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_chainStyle="packed" />
+
+    <Button
+        android:id="@+id/btn_current_location"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/get_current_location"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_current_location" />
+//end of 2nd version
+-->
+</LinearLayout>
