@@ -10,7 +10,7 @@ The images below are from GDrive, wherein I uploaded the files in GDrive but the
 Clarence Gail A. Larrosa
 4th Year Student
 
-#APK of the Application
+# APK of the Application
 The APK of the application can be seen in the releases
 or can be downloaded [APK here](github.com/clarencelarrosa/safeSiteNew-ver21/releases/tag/first)
 
