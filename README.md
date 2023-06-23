@@ -12,7 +12,7 @@ Clarence Gail A. Larrosa
 
 # APK of the Application
 The APK of the application can be seen in the releases
-or can be downloaded [APK here](github.com/clarencelarrosa/safeSiteNew-ver21/releases/tag/first).
+or can be downloaded [APK here](https://github.com/clarencelarrosa/safeSiteNew-ver21/releases/tag/apk).
 
 # VIDEO 
 The screen recording is in the GDrive.
