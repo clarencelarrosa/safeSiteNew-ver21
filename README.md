@@ -11,7 +11,7 @@ Clarence Gail A. Larrosa
 4th Year Student
 
 # APK of the Application
-The APK of the application can be seen in the releases
+The APK of the application can be seen in the "Releases" in the right side of the screeen. ( <br> ) 
 or can be downloaded [APK here](https://github.com/clarencelarrosa/safeSiteNew-ver21/releases/tag/apk).
 
 # VIDEO 
