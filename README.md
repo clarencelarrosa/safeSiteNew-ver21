@@ -10,14 +10,14 @@ The images below are from GDrive, wherein I uploaded the files in GDrive but the
 Clarence Gail A. Larrosa
 4th Year Student
 
-# APK of the Application
-The APK of the application can be seen in the *"Releases"* on the right side of the screen <br>  
-or can be downloaded [APK here](https://github.com/clarencelarrosa/safeSiteNew-ver21/releases/tag/apk).
-
 # VIDEO 
 The screen recording is in the GDrive.
 The video is only visible since it does not violate any Google terms.
 [Watch the video here](https://drive.google.com/file/d/1LOlBFl8DJtulNu3hfE_4W3sIq92WEmpf/view?usp=sharing).
+
+# APK of the Application
+The APK of the application can be seen in the *"Releases"* on the right side of the screen <br>  
+or can be downloaded [APK here](https://github.com/clarencelarrosa/safeSiteNew-ver21/releases/tag/apk).
 
 # GDrive Submission Link
 [CPE 026 - CPE41S3 (Mobile app)](https://drive.google.com/drive/folders/12szppa9r1SnsQqylQjRFj2UQkPIXxipS?usp=drive_link)
