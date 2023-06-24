@@ -19,7 +19,8 @@ The screen recording is in the GDrive.
 The video is only visible since it does not violate any Google terms.
 [Watch the video here](https://drive.google.com/file/d/1LOlBFl8DJtulNu3hfE_4W3sIq92WEmpf/view?usp=sharing).
 
-
+# GDrive Submission Link
+[CPE 026 - CPE41S3 (Mobile app)](https://drive.google.com/drive/folders/12szppa9r1SnsQqylQjRFj2UQkPIXxipS?usp=drive_link)
 
 # GDRIVE image of submission
 The images below are from GDrive, wherein I uploaded the files in GDrive but they are not visible to everyone even if it is already in the anyone with the link. 
