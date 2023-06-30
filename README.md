@@ -17,7 +17,7 @@ The video is only visible since it does not violate any Google terms.
 
 # APK of the Application
 The APK of the application can be seen in the *"Releases"* on the right side of the screen <br>  
-or can be downloaded [APK here](https://github.com/clarencelarrosa/safeSiteNew-ver21/releases/tag/apk).
+or can be downloaded [APK here](https://github.com/clarencelarrosa/safeSiteNew-ver21/releases/tag/New-2).
 
 # GDrive Submission Link
 [CPE 026 - CPE41S3 (Mobile app)](https://drive.google.com/drive/folders/12szppa9r1SnsQqylQjRFj2UQkPIXxipS?usp=drive_link)
