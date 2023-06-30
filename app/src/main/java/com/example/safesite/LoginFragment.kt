@@ -74,7 +74,6 @@ class LoginFragment : Fragment() {
             }
         })
 
-
         loginViewModel.navigatetoUserDetails.observe(this, Observer { hasFinished->
             if(hasFinished == true) {
                 Log.i("MYTAG", "Inside Observe")
@@ -91,7 +90,6 @@ class LoginFragment : Fragment() {
         binding.btnRegister.setOnClickListener { view : View ->
             view.findNavController().navigate(R.id.action_loginFragment_to_registrationFragment)
         }
-
         return binding.root
     }
 
@@ -127,7 +125,5 @@ class LoginFragment : Fragment() {
         super.onDetach()
     (activity as MainActivity).showBottomNav()
     }
-
      */
-
 }

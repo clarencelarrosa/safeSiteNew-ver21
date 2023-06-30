@@ -72,8 +72,8 @@
 
     <TextView
         android:id="@+id/textLatLong"
-        android:layout_width="157dp"
-        android:layout_height="23dp"
+        android:layout_width="166dp"
+        android:layout_height="41dp"
         android:layout_margin="10dp"
         android:layout_marginStart="127dp"
         android:layout_marginTop="50dp"
