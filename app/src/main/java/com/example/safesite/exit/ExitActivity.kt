@@ -1,18 +1,15 @@
-package com.example.safesite.profile
+package com.example.safesite.exit
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.view.View
 import android.widget.Button
 import android.widget.EditText
-import android.widget.TextView
 import android.widget.Toast
 import com.example.safesite.MainActivity
 import com.example.safesite.R
-import com.example.safesite.RegistrationFragment
 
-class ProfileActivity : AppCompatActivity()
+class ExitActivity : AppCompatActivity()
  //   , Interface
 {
     lateinit var logout: Button
@@ -20,7 +17,7 @@ class ProfileActivity : AppCompatActivity()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_profile)
+        setContentView(R.layout.activity_exit)
 
         /*
         //NEW ADD- PROFILE
@@ -31,7 +28,7 @@ class ProfileActivity : AppCompatActivity()
         val view  = layoutInflater
         //set the title of the action of the activity
         val actionBar = supportActionBar
-        actionBar!!.title="Profile"
+        actionBar!!.title="Exit"
 
         //back button
         supportActionBar!!.setDisplayHomeAsUpEnabled(true)
@@ -39,7 +36,7 @@ class ProfileActivity : AppCompatActivity()
         //logout button
         logout = findViewById(R.id.logout)
         logout.setOnClickListener {
-            Toast.makeText(this,"User Logout Successfully", Toast.LENGTH_SHORT).show()
+            Toast.makeText(this,"User has now logged out", Toast.LENGTH_SHORT).show()
             val intent = Intent(this, MainActivity::class.java)
             startActivity(intent)
             finish()

@@ -1,6 +1,6 @@
 package com.example.safesite.database
 
-//Table in register database. This is for registering.
+//Table in register database. This is for registering new users.
 //This is where the registered user will be saved.
 
 /*

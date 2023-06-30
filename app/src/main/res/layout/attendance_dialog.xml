@@ -13,8 +13,8 @@
 
         <EditText
             android:id="@+id/attendance_name_input_text"
-            android:layout_width="355dp"
-            android:layout_height="44dp"
+            android:layout_width="344dp"
+            android:layout_height="43dp"
             android:layout_margin="5sp"
             android:layout_marginStart="29dp"
             android:layout_marginEnd="51dp"
@@ -22,6 +22,7 @@
             android:minHeight="48dp"
             android:textColor="@color/lightYellow"
             android:textColorHint="@color/skinTone"
+            android:textSize="20dp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/attendance_unit_input_text" />
@@ -78,8 +79,8 @@
 
         <EditText
             android:id="@+id/attendance_unit_input_text"
-            android:layout_width="155dp"
-            android:layout_height="52dp"
+            android:layout_width="163dp"
+            android:layout_height="41dp"
             android:layout_marginEnd="32dp"
             android:hint="@string/attendance_unit_hint"
             android:textColor="@color/lightYellow"
@@ -89,14 +90,15 @@
 
         <EditText
             android:id="@+id/attendance_quantity_input_text"
-            android:layout_width="145dp"
-            android:layout_height="52dp"
+            android:layout_width="144dp"
+            android:layout_height="43dp"
             android:layout_marginStart="32dp"
             android:hint="@string/attendance_time_hint"
             android:inputType="number"
             android:minHeight="48dp"
             android:textColor="@color/lightYellow"
             android:textColorHint="@color/skinTone"
+            android:textSize="18dp"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/category_input_text" />
 
@@ -121,13 +123,13 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="65dp"
-            android:layout_marginTop="4dp"
+            android:layout_marginTop="8dp"
             android:layout_marginEnd="65dp"
             android:text="@string/product_dialog_description"
             android:textColor="@color/white"
-            android:textSize="15dp"
+            android:textSize="18dp"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintHorizontal_bias="0.509"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/textView9" />
 
@@ -136,15 +138,16 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginStart="29dp"
-            android:layout_marginTop="96dp"
+            android:layout_marginTop="136dp"
             android:layout_marginEnd="25dp"
             android:hint="@string/site_name"
             android:minHeight="48dp"
             android:textColor="@color/lightYellow"
 
             android:textColorHint="@color/skinTone"
+            android:textSize="20dp"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.333"
+            app:layout_constraintHorizontal_bias="1.0"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 

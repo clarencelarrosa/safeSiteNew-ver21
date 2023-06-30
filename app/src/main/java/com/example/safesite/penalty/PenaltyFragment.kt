@@ -46,6 +46,6 @@ class PenaltyFragment : Fragment() {
 
     override fun onResume() {
         super.onResume()
-        (requireActivity() as MainActivity).supportActionBar?.title="Create Penalties"
+        (requireActivity() as MainActivity).supportActionBar?.title="Penalties"
     }
 }

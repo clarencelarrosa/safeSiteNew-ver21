@@ -57,7 +57,7 @@ class UpdateFragment : Fragment() {
     }
 
     private fun search(){
-        if (binding.btnSearch.text == "Search") {
+        if (binding.btnSearch.text == "Search penalty here") {
             val penaltyDate = updateViewModel.penaltyDate.value.toString()
 
             initRecyclerView(penaltyDate)
@@ -93,6 +93,6 @@ class UpdateFragment : Fragment() {
 
     override fun onResume() {
         super.onResume()
-        (requireActivity() as MainActivity).supportActionBar?.title="Edit Penalties"
+        (requireActivity() as MainActivity).supportActionBar?.title="Edit Penalty"
     }
 }

@@ -11,7 +11,7 @@ class DisplayUserViewModel (private val repository: RegisterRepository) : ViewMo
     //NEW
     val users=repository.users
     init {
-        Log.i("MYTAG", "Inside users list init")
+        Log.i("MYTAG", "Inside users list")
     }
 
     private val _navigateto = MutableLiveData<Boolean>()

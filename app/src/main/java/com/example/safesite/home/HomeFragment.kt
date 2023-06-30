@@ -9,9 +9,11 @@ import androidx.fragment.app.Fragment
 import androidx.navigation.findNavController
 import androidx.navigation.ui.NavigationUI
 import com.example.safesite.R
+
 import com.example.safesite.attendance.AttendanceMainActivity
 import com.example.safesite.databinding.FragmentHomeBinding
 import com.example.safesite.location.LocationActivity
+import com.example.safesite.record.RecordMainActivity
 import com.example.safesite.todo.TodoMainActivity
 
 
@@ -30,7 +32,7 @@ class HomeFragment : Fragment() {
         to attendance activity
          */
         binding.btnHomeAttendance.setOnClickListener {
-            val intent = Intent (this@HomeFragment.requireContext(), AttendanceMainActivity::class.java)
+            val intent = Intent (this@HomeFragment.requireContext(), RecordMainActivity::class.java)
             startActivity(intent)
         }
 
@@ -38,9 +40,7 @@ class HomeFragment : Fragment() {
         binding.penalty.setOnClickListener { view : View ->
             view.findNavController().navigate(R.id.action_nav_home_to_penaltyFragment)
         }
- */
 
-/*
         binding.btnHomeTodo.setOnClickListener {
             val intent = Intent (this@HomeFragment.requireContext(), TodoMainActivity::class.java)
             startActivity(intent)

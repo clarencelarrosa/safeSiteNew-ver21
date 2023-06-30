@@ -50,7 +50,7 @@
             android:background="@drawable/round_border"
             android:ems="10"
             android:hint="@string/add_fine_amount"
-            android:inputType="textPersonName"
+            android:inputType="number"
             android:minHeight="48dp"
             android:padding="16dp"
 

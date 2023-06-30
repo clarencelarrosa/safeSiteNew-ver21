@@ -69,7 +69,7 @@ class LoginFragment : Fragment() {
 
         loginViewModel.errorToastInvalidPassword.observe(this, Observer { hasError->
             if(hasError==true){
-                Toast.makeText(requireContext(), "Invalid Password! Please check your Password", Toast.LENGTH_SHORT).show()
+                Toast.makeText(requireContext(), "Invalid Password! Please check and retype your Password", Toast.LENGTH_SHORT).show()
                 loginViewModel.donetoastInvalidPassword()
             }
         })
@@ -77,7 +77,7 @@ class LoginFragment : Fragment() {
 
         loginViewModel.navigatetoUserDetails.observe(this, Observer { hasFinished->
             if(hasFinished == true) {
-                Log.i("MYTAG", "inside observe")
+                Log.i("MYTAG", "Inside Observe")
                 //displayUsersList()
                 navigateUserDetails()
                 loginViewModel.doneNavigatingUserDetails()
@@ -101,7 +101,7 @@ class LoginFragment : Fragment() {
     }
 
     private fun navigateUserDetails() {
-        Log.i("MYTAG", "Inside home")
+        Log.i("MYTAG", "Inside home page")
         this.findNavController().navigate(R.id.action_loginFragment_to_nav_home)
     }
 
@@ -123,8 +123,6 @@ class LoginFragment : Fragment() {
 
         view.visibility = View.GONE
     }
- */
-    /*
     override fun onDetach() {
         super.onDetach()
     (activity as MainActivity).showBottomNav()

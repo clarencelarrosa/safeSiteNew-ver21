@@ -16,7 +16,7 @@ class AttendanceAdapter(
     var expandableAttendanceList: HashMap<String, ArrayList<Attendance>>
 ) : BaseExpandableListAdapter() {
 
-    //aattendance
+    //attendance
     override fun getGroupCount(): Int {
         return expandableAttendanceList.size
     }

@@ -18,10 +18,9 @@ class AboutFragment : Fragment() {
         // Inflate the layout for this fragment
         return inflater.inflate(R.layout.fragment_about, container, false)
     }
-
     override fun onResume() {
         super.onResume()
-        //Action bar title
+        //this will set the title in the action bar
         (requireActivity() as MainActivity).supportActionBar?.title="About"
     }
 }

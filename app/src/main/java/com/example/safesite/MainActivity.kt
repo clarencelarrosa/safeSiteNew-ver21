@@ -52,8 +52,8 @@ class MainActivity : AppCompatActivity() {
             setOf(
                 R.id.nav_home, R.id.nav_slideshow,
                 R.id.aboutFragment, R.id.faqFragment2, R.id.locationActivity,
-                R.id.quizMainActivity2, R.id.profileActivity, R.id.todoMainActivity,
-                R.id.penaltyFragment, R.id.attendanceMainActivity
+                R.id.exitActivity, R.id.todoMainActivity,
+                R.id.penaltyFragment, R.id.attendanceMainActivity, R.id.recordMainActivity
             ), drawerLayout
         )
 

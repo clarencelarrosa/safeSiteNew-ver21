@@ -34,7 +34,6 @@ class AddViewModel (private val repository: RegisterRepository, application: App
     val password = MutableLiveData<String>()
 
     init{
-
         firstName.value=""
         lastName.value=""
         username.value = ""
@@ -70,10 +69,10 @@ class AddViewModel (private val repository: RegisterRepository, application: App
                 Log.i("MYTAG", usersnames.toString() + "------------------")
                 if (usersnames != null) {
                     _errorToastUsername.value = true
-                    Log.i("MYTAG", "inside if not null")
+                    Log.i("MYTAG", "Inside if not null")
                 } else {
-                    Log.i("MYTAG", userDetailsLiveData.value.toString() + "asdfghjkl")
-                    Log.i("MYTAG", "ok i'm in")
+                    Log.i("MYTAG", userDetailsLiveData.value.toString() + "asdfghjklmnop")
+                    Log.i("MYTAG", "OK! I'm in")
                     //ORIG
                     val firstnameval = firstName.value!!
                     val lastnameval = lastName.value!!
@@ -107,7 +106,7 @@ class AddViewModel (private val repository: RegisterRepository, application: App
 
     fun donetoastUserName() {
         _errorToast.value = false
-        Log.i("MYTAG", "Done toasting  username")
+        Log.i("MYTAG", "Done toasting username")
     }
 
     //ORIGINAL

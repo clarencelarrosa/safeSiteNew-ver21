@@ -53,11 +53,11 @@
             android:id="@+id/btnDisplay"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="124dp"
-            android:layout_marginTop="516dp"
+            android:layout_marginStart="120dp"
+            android:layout_marginTop="584dp"
+            android:text="@string/display_penalty"
             android:textColor="@color/white"
             android:textSize="15sp"
-            android:text="@string/display_penalty"
             app:layout_constraintStart_toStartOf="@+id/imageView3"
             app:layout_constraintTop_toTopOf="@+id/imageView3" />
 

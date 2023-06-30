@@ -36,7 +36,7 @@ class LocationActivity : AppCompatActivity() {
         resultReceiver = AddressResultReceiver(Handler())
         progressBar = findViewById(R.id.progress_circular)
         textLatLong = findViewById(R.id.textLatLong)
-       //address = findViewById(R.id.textaddress)
+        address = findViewById(R.id.textaddress)
         country = findViewById(R.id.textcountry)
         district = findViewById(R.id.textdistrict)
 

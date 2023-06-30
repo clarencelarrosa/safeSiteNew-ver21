@@ -61,25 +61,10 @@
         android:label="activity_location"
         tools:layout="@layout/activity_location" />
     <activity
-        android:id="@+id/quizMainActivity2"
-        android:name="com.example.safesite.ppeAssessment.QuizMainActivity"
-        android:label="activity_quiz_main"
-        tools:layout="@layout/activity_quiz_main" />
-    <activity
-        android:id="@+id/quizQuestionsActivity"
-        android:name="com.example.safesite.ppeAssessment.QuizQuestionsActivity"
-        android:label="activity_quiz_questions"
-        tools:layout="@layout/activity_quiz_questions" />
-    <activity
-        android:id="@+id/resultActivity"
-        android:name="com.example.safesite.ppeAssessment.ResultActivity"
-        android:label="activity_result"
-        tools:layout="@layout/activity_result" />
-    <activity
-        android:id="@+id/profileActivity"
-        android:name="com.example.safesite.profile.ProfileActivity"
+        android:id="@+id/exitActivity"
+        android:name="com.example.safesite.exit.ExitActivity"
         android:label="activity_profile"
-        tools:layout="@layout/activity_profile" />
+        tools:layout="@layout/activity_exit" />
     <activity
         android:id="@+id/todoMainActivity"
         android:name="com.example.safesite.todo.TodoMainActivity"
@@ -122,7 +107,11 @@
         android:id="@+id/addFragment"
         android:name="com.example.safesite.penalty.AddFragment"
         android:label="fragment_add"
-        tools:layout="@layout/fragment_add" />
+        tools:layout="@layout/fragment_add" >
+        <action
+            android:id="@+id/action_addFragment_to_penaltyFragment"
+            app:destination="@id/penaltyFragment" />
+    </fragment>
     <fragment
         android:id="@+id/deleteFragment"
         android:name="com.example.safesite.penalty.DeleteFragment"
@@ -132,7 +121,11 @@
         android:id="@+id/updateFragment"
         android:name="com.example.safesite.penalty.UpdateFragment"
         android:label="fragment_update"
-        tools:layout="@layout/fragment_update" />
+        tools:layout="@layout/fragment_update" >
+        <action
+            android:id="@+id/action_updateFragment_to_penaltyFragment"
+            app:destination="@id/penaltyFragment" />
+    </fragment>
     <fragment
         android:id="@+id/displayFragment"
         android:name="com.example.safesite.penalty.DisplayFragment"
@@ -144,10 +137,100 @@
         android:label="activity_attendance_main"
         tools:layout="@layout/activity_attendance_main" />
     <activity
+        android:id="@+id/recordMainActivity"
+        android:name="com.example.safesite.record.RecordMainActivity"
+        android:label="activity_record_main"
+        tools:layout="@layout/activity_record_main" />
+    <activity
+        android:id="@+id/newRecordActivity"
+        android:name="com.example.safesite.record.NewRecordActivity"
+        android:label="activity_new_record"
+        tools:layout="@layout/activity_new_record" />
+    <activity
+        android:id="@+id/updateRecordActivity"
+        android:name="com.example.safesite.record.UpdateRecordActivity"
+        android:label="activity_update_record"
+        tools:layout="@layout/activity_update_record" />
+    <activity
+        android:id="@+id/editDateActivity"
+        android:name="com.example.safesite.attendance.EditDateActivity"
+        android:label="activity_edit_date"
+        tools:layout="@layout/activity_edit_date" />
+    <!--
+    <activity
         android:id="@+id/editShoppingListActivity2"
         android:name="com.example.safesite.attendance.EditDateActivity"
         android:label="activity_edit_shopping_list"
         tools:layout="@layout/activity_edit_date" />
+    <activity
+        android:id="@+id/recordMainActivity2"
+        android:name="com.example.safesite.record.RecordMainActivity"
+        android:label="activity_record_main"
+        tools:layout="@layout/activity_record_main" />
+    <fragment
+        android:id="@+id/addRFragment"
+        android:name="com.example.safesite.record.AddRFragment"
+        android:label="AddRFragment" >
+        <action
+            android:id="@+id/action_addRFragment_to_listRFragment"
+            app:destination="@id/listRFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/listRFragment"
+        android:name="com.example.safesite.record.ListRFragment"
+        android:label="fragment_list_r"
+        tools:layout="@layout/fragment_list_r" >
+        <action
+            android:id="@+id/action_listRFragment_to_addRFragment"
+            app:destination="@id/addRFragment" />
+        <action
+            android:id="@+id/action_listRFragment_to_updateRFragment"
+            app:destination="@id/updateRFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/updateRFragment"
+        android:name="com.example.safesite.record.UpdateRFragment"
+        android:label="fragment_update_r"
+        tools:layout="@layout/fragment_update_r" >
+        <action
+            android:id="@+id/action_updateRFragment_to_listRFragment"
+            app:destination="@id/listRFragment" />
+    </fragment>
 
+        <fragment
+            android:id="@+id/ListRFragment"
+            android:name="com.example.safesite.record.ListRFragment"
+            android:label="fragment_list_r"
+            tools:layout="@layout/fragment_list_r" >
+            <action
+                android:id="@+id/action_listRFragment_to_addRFragment"
+                app:destination="@id/addRFragment" />
+            <action
+                android:id="@+id/action_listRFragment_to_updateFragment"
+                app:destination="@id/updateRFragment" />
+        </fragment>
+        <fragment
+            android:id="@+id/addRFragment"
+            android:name="com.example.safesite.record.AddRFragment"
+            android:label="Add"
+            tools:layout="@layout/fragment_add_r" >
+            <action
+                android:id="@+id/action_addRFragment_to_listRFragment"
+                app:destination="@id/ListRFragment" />
+        </fragment>
+
+        <fragment
+            android:id="@+id/updateRFragment"
+            android:name="com.example.safesite.record.UpdateRFragment"
+            android:label="fragment_update_r"
+            tools:layout="@layout/fragment_update_r" >
+            <action
+                android:id="@+id/action_updateRFragment_to_listRFragment"
+                app:destination="@id/ListRFragment" />
+            <argument
+                android:name="currentUser"
+                app:argType="com.example.safesite.record.database.User" />
+        </fragment>
+        -->
 
 </navigation>

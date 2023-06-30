@@ -15,7 +15,7 @@ class FetchAddressService : IntentService("FetchAddressService") {
     var resultReceiver: ResultReceiver? = null
     override fun onHandleIntent(intent: Intent?) {
         if (intent != null) {
-            var errormessgae = ""
+            var errormessage = ""
             resultReceiver = intent.getParcelableExtra(Constants.RECEIVER)
             val location = intent.getParcelableExtra<Location>(Constants.LOCATION_DATA_EXTRA)
                 ?: return
@@ -28,11 +28,11 @@ class FetchAddressService : IntentService("FetchAddressService") {
                     1
                 )
             } catch (ioException: Exception) {
-                Log.e("", "Error occurred in getting address for the location")
+                Log.e("", "Error occurred in getting the address of location")
             }
             if (addresses == null || addresses.size == 0) {
-                errormessgae = "No location address found"
-                Toast.makeText(this, "" + errormessgae, Toast.LENGTH_SHORT).show()
+                errormessage = "No address found"
+                Toast.makeText(this, "" + errormessage, Toast.LENGTH_SHORT).show()
             } else {
                 val address = addresses[0]
                 val str_Country = address.countryName
