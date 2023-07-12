@@ -12,19 +12,11 @@ import com.example.safesite.databinding.FragmentFaqBinding
 
 class FaqFragment : Fragment() {
 
-    private lateinit var binding: FragmentFaqBinding
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
-       // return inflater.inflate(R.layout.fragment_faq, container, false)
-        binding = FragmentFaqBinding.inflate(layoutInflater)
-
-        binding.faqBack.setOnClickListener { view: View ->
-            view.findNavController().navigate(R.id.action_faqFragment2_to_settingsFragment)
-
-        }
-        return binding.root
+        return inflater.inflate(R.layout.fragment_faq, container, false)
     }
 }
