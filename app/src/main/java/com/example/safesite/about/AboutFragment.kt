@@ -14,7 +14,7 @@ import com.example.safesite.MainActivity
 
 class AboutFragment : Fragment() {
 
-    //private lateinit var binding: FragmentAboutBinding
+    //private lateini t var binding: FragmentAboutBinding
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
