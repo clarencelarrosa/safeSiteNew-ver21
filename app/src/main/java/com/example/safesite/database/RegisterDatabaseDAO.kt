@@ -10,7 +10,6 @@ interface RegisterDatabaseDAO {
 
     @Insert
     suspend fun insertRegister(register: Register): Long
-
     @Query
         ("select * from user_register_table order by userId asc")
     fun displayUsers(): LiveData<List<Register>>

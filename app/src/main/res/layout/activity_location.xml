@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:layout_gravity="center"
-    android:background="@drawable/backgroundblue"
+    android:background="@color/darkBlue"
     android:gravity="center"
     android:orientation="vertical"
     tools:context=".location.LocationActivity">
@@ -17,6 +17,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="104dp"
         android:text="@string/location"
+        android:textColor="@color/lightYellow"
         android:textAlignment="center"
         android:textSize="50dp"
         android:textStyle="bold"
@@ -30,14 +31,12 @@
         android:layout_width="345dp"
         android:layout_height="62dp"
         android:layout_margin="10dp"
-        android:layout_marginStart="33dp"
-        android:layout_marginTop="55dp"
-        android:layout_marginEnd="56dp"
+        android:layout_marginTop="100dp"
         android:text="@string/reminder_location"
         android:textAlignment="center"
-        android:textColor="@color/black"
+        android:textColor="@color/yellow"
         android:textSize="20dp"
-        android:textStyle="bold"
+        android:textStyle="normal"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView13" />
@@ -48,15 +47,16 @@
         android:layout_height="wrap_content"
 
         android:layout_marginStart="100dp"
-        android:layout_marginTop="74dp"
+        android:layout_marginTop="100dp"
         android:layout_marginEnd="100dp"
         android:background="@color/white"
         android:padding="10dp"
         android:text="@string/location_button_tap"
         android:textColor="@color/black"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.516"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/linearLayout4" />
+        app:layout_constraintTop_toBottomOf="@+id/textLatLong" />
 
     <ProgressBar
         android:id="@+id/progress_circular"
@@ -79,7 +79,7 @@
         android:layout_marginTop="50dp"
         android:layout_marginEnd="244dp"
         android:text="@string/latlong"
-        android:textColor="@color/darkBlue"
+        android:textColor="@color/white"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView15" />
@@ -96,6 +96,7 @@
 
     </LinearLayout>
 
+    <!--
     <LinearLayout
         android:id="@+id/linearLayout4"
         android:layout_width="match_parent"
@@ -165,40 +166,6 @@
 
         </LinearLayout>
 
-        <!--
-                       <LinearLayout
-                           android:layout_width="match_parent"
-                           android:layout_height="wrap_content"
-                           android:layout_marginStart="@dimen/spacing_standard"
-                           android:layout_marginTop="@dimen/spacing_standard"
-                           android:layout_marginEnd="@dimen/spacing_standard"
-                           android:layout_marginBottom="@dimen/spacing_control"
-                           android:orientation="horizontal">
-
-                           <TextView
-                               android:layout_width="wrap_content"
-                               android:layout_height="match_parent"
-                               android:layout_gravity="center_vertical"
-                               android:layout_marginTop="0dp"
-
-                               android:gravity="center_vertical"
-                               android:text="@string/lbl_state"
-                               android:textColor="@color/black" />
-
-                           <TextView
-                               android:id="@+id/textstate"
-                               android:layout_width="wrap_content"
-                               android:layout_height="wrap_content"
-                               android:layout_marginStart="@dimen/spacing_control"
-                               android:layout_marginTop="0dp"
-
-                               android:text="@string/ques"
-                               android:textColor="@color/colorPrimary"
-                               android:textSize="15dp"
-                               tools:text="$50" />
-
-                       </LinearLayout>
-           -->
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -265,6 +232,7 @@
 
         </LinearLayout>
     </LinearLayout>
+    -->
     <!--
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"

@@ -103,5 +103,4 @@ class LoginViewModel (private val repository: RegisterRepository, application: A
 
     override fun addOnPropertyChangedCallback(callback: Observable.OnPropertyChangedCallback?) {
     }
-
 }

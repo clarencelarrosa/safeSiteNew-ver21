@@ -58,9 +58,9 @@ class AddViewModel (private val repository: RegisterRepository, application: App
     val errortoastUsername: LiveData<Boolean>
         get() = _errorToastUsername
 
-
+    //conditions in register upon clicking the button
     fun submitButton(){
-        Log.i("MYTAG", "INSIDE THE SAVE BUTTON")
+        Log.i("MYTAG", "INSIDE THE SUBMIT BUTTON IN REGISTER")
         if (firstName.value == null || lastName.value == null || username.value == null || password.value == null) {
             _errorToast.value = true
         } else {

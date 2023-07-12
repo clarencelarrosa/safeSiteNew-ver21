@@ -83,7 +83,7 @@
 
     <string name="reminder_location">You must turn on your location. Internet is necessary.</string>
     <string name="latlong">Latitude: and Longitude:</string>
-    <string name="location_button_tap">Tap to fetch Location</string>
+    <string name="location_button_tap">Tap to fetch coordinates</string>
 
     <string name="stop_location">STOP LOCATION</string>
     <string name="last_updated">Last Updated</string>
@@ -192,7 +192,7 @@
     <string name="record_title">Attendance</string>
     <string name="name_input">Name</string>
     <string name="sitename_input">Site location</string>
-    <string name="ppe_input">Enter PPE</string>
+    <string name="ppe_input">Enter PPE </string>
     <string name="date_input">Date</string>
     <string name="total_input">Total # of PPE</string>
     <string name="button_input">ADD RECORD</string>
@@ -202,7 +202,18 @@
     <string name="date_display">Date</string>
     <string name="total_display">Total PPE</string>
 
-<!--- Previous -->
+    <!--SEARCH STRINGS-->
+    <string name="search_photo_username">Username</string>
+    <string name="failed_load_display">Failed to load</string>
+    <string name="retry_button_text">Retry</string>
+    <string name="no_results_display">No results found</string>
+    <string name="try_again_button_gallery_display">Please try again</string>
+    <string name="no_results_display_gallery">No results found for this search</string>
+    <string name="creator_display_photo_details">Photo by User on Unsplash</string>
+    <string name="description_display_photo_details">This is the description</string>
+
+
+    <!--- Previous -->
     <!-- TO DO -->
     <string name="my_todo">My Todo</string>
     <string name="close_app">Logout</string>
@@ -265,6 +276,15 @@
     </plurals>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="title_activity_search_main">SearchMainActivity</string>
+    <!-- Strings used for fragments for navigation -->
+    <string name="first_fragment_label">First Fragment</string>
+    <string name="second_fragment_label">Second Fragment</string>
+    <string name="next">Next</string>
+    <string name="previous">Previous</string>
+
+    <string name="hello_first_fragment">Hello first fragment</string>
+    <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
 
 
 </resources>

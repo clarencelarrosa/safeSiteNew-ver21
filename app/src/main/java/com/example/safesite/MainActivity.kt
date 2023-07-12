@@ -17,8 +17,9 @@ import androidx.navigation.ui.setupWithNavController
 import com.example.safesite.databinding.ActivityMainBinding
 import com.google.android.material.bottomnavigation.BottomNavigationView
 import com.google.android.material.navigation.NavigationView
+import dagger.hilt.android.AndroidEntryPoint
 
-
+@AndroidEntryPoint
 class MainActivity : AppCompatActivity() {
 
     private lateinit var appBarConfiguration: AppBarConfiguration
@@ -40,7 +41,7 @@ class MainActivity : AppCompatActivity() {
         bottomNav.setOnNavigationItemSelectedListener(navListener)
          */
 
-        setSupportActionBar(binding.appBarMain.toolbar)
+       setSupportActionBar(binding.appBarMain.toolbar)
 
         val drawerLayout: DrawerLayout = binding.drawerLayout
         val navView: NavigationView = binding.navView
@@ -52,7 +53,7 @@ class MainActivity : AppCompatActivity() {
             setOf(
                 R.id.nav_home, R.id.nav_slideshow,
                 R.id.aboutFragment, R.id.faqFragment2, R.id.locationActivity,
-                R.id.exitActivity, R.id.todoMainActivity,
+                R.id.exitActivity, R.id.todoMainActivity, R.id.galleryFragment,
                 R.id.penaltyFragment, R.id.attendanceMainActivity, R.id.recordMainActivity
             ), drawerLayout
         )
@@ -67,13 +68,13 @@ class MainActivity : AppCompatActivity() {
         navController.addOnDestinationChangedListener{
             _, destination, _ ->
             if (destination.id == R.id.loginFragment) {
-                navBottomView.visibility = View.GONE
+                navBottomView.visibility = View.GONE //Bottom nav is hide when it is in login fragment (loginFragment ID)
             }
             else if(destination.id==R.id.registrationFragment){
-                navBottomView.visibility = View.GONE
+                navBottomView.visibility = View.GONE //Bottom nav is hide when it is in register fragment (registrationFragment ID)
             }
                 else {
-                navBottomView.visibility=View.VISIBLE
+                navBottomView.visibility=View.VISIBLE //bottom navigation will be shown if the ID of fragment are not loginFragment or registrationFragment
             }
         }
     }

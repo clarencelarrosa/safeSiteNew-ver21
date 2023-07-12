@@ -20,7 +20,6 @@ class PenaltyFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
-        //return inflater.inflate(R.layout.fragment_heart, container, false)
         val binding = DataBindingUtil.inflate<FragmentPenaltyBinding>(
             inflater,
             R.layout.fragment_penalty, container, false

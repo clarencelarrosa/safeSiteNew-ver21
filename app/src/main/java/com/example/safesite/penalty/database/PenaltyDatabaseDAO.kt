@@ -23,4 +23,7 @@ interface PenaltyDatabaseDAO {
 
     @Query("SELECT * FROM penalty_table  ORDER BY penaltyId DESC")
     fun displayPenalty(): Flow<List<Penalty>>
+
+    @Query ("SELECT * FROM penalty_table where penaltyDate=:penaltyDate")
+    suspend fun getPenalties(penaltyDate: String): Penalty?
 }

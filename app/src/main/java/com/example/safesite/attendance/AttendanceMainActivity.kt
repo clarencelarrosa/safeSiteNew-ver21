@@ -42,7 +42,7 @@ class AttendanceMainActivity : AppCompatActivity() {
     override fun onResume() {
         super.onResume()
         val tinyDB = SharedPreferencesService(applicationContext)
-        listOfDateItem = tinyDB.getDateLists("attendance_list", Date::class.java)
+        listOfDateItem = tinyDB.getDateLists("attendance_list", DateAttend::class.java)
         binding.dateItemList.adapter = DateAdapter(this, listOfDateItem)
         if (listOfDateItem.isNotEmpty()) {
             binding.noDateList.visibility = View.GONE
@@ -54,7 +54,7 @@ class AttendanceMainActivity : AppCompatActivity() {
     private fun saveDateList(dateItems: ArrayList<Any>) {
         val tinyDB = SharedPreferencesService(applicationContext)
         tinyDB.saveDateLists("attendance_list", dateItems)
-        listOfDateItem = tinyDB.getDateLists("attendance_list", Date::class.java)
+        listOfDateItem = tinyDB.getDateLists("attendance_list", DateAttend::class.java)
         binding.dateItemList.adapter = DateAdapter(this, listOfDateItem)
         if (listOfDateItem.isNotEmpty()) {
             binding.noDateList.visibility = View.GONE
@@ -75,7 +75,7 @@ class AttendanceMainActivity : AppCompatActivity() {
         val dialogBinding = DateDialogBinding.inflate(layoutInflater)
         dialogBinding.createDateListBtn.setOnClickListener {
             listOfDateItem.add(
-                Date(
+                DateAttend(
                     dialogBinding.dateListInputText.text.toString(),
                     hashMapOf("No Site" to arrayListOf())
                 )

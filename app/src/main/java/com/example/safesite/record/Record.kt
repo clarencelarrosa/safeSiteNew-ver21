@@ -8,7 +8,7 @@ import java.io.Serializable
 
 
 @Entity(tableName = "records")
-data class Record (
+data class Record(
     @PrimaryKey(autoGenerate = true)
     val id: Int,
     val name: String,

@@ -3,6 +3,7 @@ package com.example.safesite.record
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.view.MenuItem
 import android.view.View
 import androidx.core.content.ContextCompat
 import androidx.lifecycle.ViewModelProvider
@@ -35,6 +36,7 @@ class RecordMainActivity : AppCompatActivity() {
         binding = ActivityRecordMainBinding.inflate(layoutInflater)
         val view = binding.root
         setContentView(view)
+
 
         //back button
         supportActionBar!!.setDisplayHomeAsUpEnabled(true)
@@ -108,7 +110,6 @@ class RecordMainActivity : AppCompatActivity() {
             }
 
             override fun onSwiped(viewHolder: RecyclerView.ViewHolder, direction: Int) {
-
                 deleteRecord(recordList[viewHolder.adapterPosition])
             }
         }
@@ -175,8 +176,21 @@ class RecordMainActivity : AppCompatActivity() {
         fetchData()
     }
 
+
     override fun onSupportNavigateUp(): Boolean {
         onBackPressed()
         return true
     }
+
+/*
+    override fun onContextItemSelected(item: MenuItem): Boolean {
+        when (item.itemId) {
+            android.R.id.home -> {
+                finish()
+                return true
+            }
+        }
+        return super.onContextItemSelected(item)
+    }
+ */
 }

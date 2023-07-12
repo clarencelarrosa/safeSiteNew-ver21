@@ -22,7 +22,7 @@ import com.example.safesite.model.LoginViewModelFactory
 import com.google.android.material.bottomnavigation.BottomNavigationView
 
 class LoginFragment : Fragment() {
-    private lateinit var binding: FragmentLoginBinding
+    private lateinit var binding:FragmentLoginBinding
     private lateinit var loginViewModel: LoginViewModel
 
     @SuppressLint("FragmentLiveDataObserve")
@@ -30,8 +30,9 @@ class LoginFragment : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        // Inflate the layout for this fragment
 
+
+        // Inflate the layout for this fragment
         binding = DataBindingUtil.inflate(inflater,
             R.layout.fragment_login,container,false)
         //(activity as MainActivity).hideBottomNav()
@@ -77,7 +78,7 @@ class LoginFragment : Fragment() {
         loginViewModel.navigatetoUserDetails.observe(this, Observer { hasFinished->
             if(hasFinished == true) {
                 Log.i("MYTAG", "Inside Observe")
-                //displayUsersList()
+               // displayUsersList()
                 navigateUserDetails()
                 loginViewModel.doneNavigatingUserDetails()
             }
@@ -90,8 +91,10 @@ class LoginFragment : Fragment() {
         binding.btnRegister.setOnClickListener { view : View ->
             view.findNavController().navigate(R.id.action_loginFragment_to_registrationFragment)
         }
+
         return binding.root
     }
+    
 
     private fun displayUsersList() {
         Log.i("MYTAG", "inside display users list")
@@ -106,10 +109,8 @@ class LoginFragment : Fragment() {
     //action bar
     override fun onResume() {
         super.onResume()
-        //title of the action bar
-        (requireActivity() as MainActivity).supportActionBar?.title="Login"
-        //back button (hide)
-        (requireActivity() as MainActivity).supportActionBar?.setDisplayHomeAsUpEnabled(false)
+        (requireActivity() as MainActivity).supportActionBar?.title="Login" //title of the action bar
+        (requireActivity() as MainActivity).supportActionBar?.setDisplayHomeAsUpEnabled(false) //back button (hide)
         //(requireActivity() as MainActivity).supportActionBar?.hide()
     }
 

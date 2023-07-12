@@ -36,17 +36,11 @@ class ExitActivity : AppCompatActivity()
         //logout button
         logout = findViewById(R.id.logout)
         logout.setOnClickListener {
-            Toast.makeText(this,"User has now logged out", Toast.LENGTH_SHORT).show()
-            val intent = Intent(this, MainActivity::class.java)
+            Toast.makeText(this,"User has now logged out", Toast.LENGTH_SHORT).show() //this will appear when logging out
+            val intent = Intent(this, MainActivity::class.java) //will redirect to the main activity (login)
             startActivity(intent)
             finish()
         }
-/*
-        //NEW ADD - PROFILE
-        val intent = intent
-        val stringTxt = intent.getStringExtra("xx")
-        textUsername.text=stringTxt
- */
     }
     //action for back button
     override fun onSupportNavigateUp(): Boolean {

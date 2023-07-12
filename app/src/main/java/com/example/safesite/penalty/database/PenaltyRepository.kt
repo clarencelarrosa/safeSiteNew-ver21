@@ -1,5 +1,7 @@
 package com.example.safesite.penalty.database
 
+import android.util.Log
+import com.example.safesite.database.Register
 import kotlinx.coroutines.flow.Flow
 
 
@@ -14,12 +16,17 @@ class PenaltyRepository (private val dao: PenaltyDatabaseDAO)  {
     }
 
     val penalty = dao.displayPenalty()
-    suspend fun search(penalty_date: String): Flow<List<Penalty>> {
 
+    //search using date
+    suspend fun search(penalty_date: String): Flow<List<Penalty>> {
         return dao.searchPenalty(penalty_date)
     }
 
     suspend fun update(penalty: Penalty): Int {
         return dao.updatePenalty(penalty)
+    }
+
+    suspend fun getPenalTies(penalty_date: String): Penalty? {
+        return dao.getPenalties(penalty_date)
     }
 }

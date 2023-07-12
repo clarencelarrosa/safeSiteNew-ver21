@@ -28,7 +28,6 @@ class LocationActivity : AppCompatActivity() {
     var district: TextView? = null
     var country: TextView? = null
     var resultReceiver: ResultReceiver? = null
-
     @SuppressLint("MissingInflatedId")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -36,9 +35,9 @@ class LocationActivity : AppCompatActivity() {
         resultReceiver = AddressResultReceiver(Handler())
         progressBar = findViewById(R.id.progress_circular)
         textLatLong = findViewById(R.id.textLatLong)
-        address = findViewById(R.id.textaddress)
-        country = findViewById(R.id.textcountry)
-        district = findViewById(R.id.textdistrict)
+    //    address = findViewById(R.id.textaddress)
+      //  country = findViewById(R.id.textcountry)
+        //district = findViewById(R.id.textdistrict)
 
         //set the title of the action of the activity
         val actionBar = supportActionBar
@@ -65,7 +64,6 @@ class LocationActivity : AppCompatActivity() {
             }
         }
     }
-
     override fun onRequestPermissionsResult(
         requestCode: Int,
         permissions: Array<String>,

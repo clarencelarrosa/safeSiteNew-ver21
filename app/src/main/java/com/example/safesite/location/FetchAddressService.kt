@@ -47,7 +47,6 @@ class FetchAddressService : IntentService("FetchAddressService") {
             }
         }
     }
-
     private fun deliverResultToReceiver(
         resultcode: Int,
         address: String,

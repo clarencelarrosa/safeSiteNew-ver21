@@ -5,13 +5,12 @@ import androidx.room.Database
 import androidx.room.Room
 import androidx.room.RoomDatabase
 
-@Database(entities = [Penalty::class], version = 1, exportSchema = false)
+@Database(entities = [Penalty::class], version = 2, exportSchema = false)
 abstract class PenaltyDatabase : RoomDatabase() {
     abstract val penaltyDatabaseDao: PenaltyDatabaseDAO
     companion object {
         @Volatile
         private var INSTANCE: PenaltyDatabase? = null
-
         fun getInstance(context: Context): PenaltyDatabase {
             synchronized(this) {
                 var instance = INSTANCE

@@ -4,6 +4,8 @@ import androidx.room.ColumnInfo
 import androidx.room.Entity
 import androidx.room.PrimaryKey
 
+
+//tables in penalties. It has the date of record, total amount of penalty fee, the penalty description
 @Entity(tableName = "penalty_table")
 data class Penalty(
 

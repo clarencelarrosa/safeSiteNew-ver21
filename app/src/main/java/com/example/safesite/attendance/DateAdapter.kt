@@ -18,8 +18,8 @@ class DateAdapter(
         return dateListArray.size
     }
 
-    override fun getItem(a0: Int): Date {
-        return dateListArray[a0] as Date
+    override fun getItem(a0: Int): DateAttend {
+        return dateListArray[a0] as DateAttend
     }
 
     override fun getItemId(a0: Int): Long {

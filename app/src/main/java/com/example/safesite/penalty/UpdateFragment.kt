@@ -57,7 +57,7 @@ class UpdateFragment : Fragment() {
     }
 
     private fun search(){
-        if (binding.btnSearch.text == "Search penalty here") {
+        if (binding.btnSearch.text == "Search") {
             val penaltyDate = updateViewModel.penaltyDate.value.toString()
 
             initRecyclerView(penaltyDate)

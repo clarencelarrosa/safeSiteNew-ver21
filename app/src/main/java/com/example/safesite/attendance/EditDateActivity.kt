@@ -18,7 +18,7 @@ import com.example.safesite.databinding.DateDialogBinding
 
 class EditDateActivity : AppCompatActivity() {
 
-    private lateinit var dateList: Date
+    private lateinit var dateList: DateAttend
     private lateinit var binding: ActivityEditDateBinding
     private var index: Int? = 0
 
@@ -82,7 +82,7 @@ class EditDateActivity : AppCompatActivity() {
         val dialogBinding = ConfirmDeleteDateDialogBinding.inflate(layoutInflater)
         dialogBinding.confirmButton.setOnClickListener {
             val tinyDB = SharedPreferencesService(applicationContext)
-            val list = tinyDB.getDateLists("attendance_list", Date::class.java)
+            val list = tinyDB.getDateLists("attendance_list", DateAttend::class.java)
             list.removeAt(index!!)
             tinyDB.saveDateLists("attendance_list", list)
             dialog.dismiss()
@@ -97,13 +97,13 @@ class EditDateActivity : AppCompatActivity() {
 
     private fun getDateList() {
         val tinyDB = SharedPreferencesService(applicationContext)
-        val list = tinyDB.getDateLists("attendance_list", Date::class.java)
-        dateList = list[index!!] as Date
+        val list = tinyDB.getDateLists("attendance_list", DateAttend::class.java)
+        dateList = list[index!!] as DateAttend
     }
 
     private fun saveDateList() {
         val tinyDB = SharedPreferencesService(applicationContext)
-        val list = tinyDB.getDateLists("attendance_list", Date::class.java)
+        val list = tinyDB.getDateLists("attendance_list", DateAttend::class.java)
         list[index!!] = dateList
         tinyDB.saveDateLists("attendance_list", list)
         binding.attendanceList.setAdapter(

@@ -6,21 +6,31 @@ plugins {
     id 'kotlin-parcelize' // <- In order to use '@Parcelize' since 'kotlin-android-extension' is now deprecated
     //id 'kotlin-android-extensions'
   //  id 'androidx.navigation.safeargs.kotlin'
-    //id 'dagger.hilt.android.plugin'
+    id 'dagger.hilt.android.plugin'
+    id 'androidx.navigation.safeargs'
+
+
 }
 
 android {
+    compileSdkVersion rootProject.compileSdkVersion //New
+ //   buildToolsVersion "30.0.2"
+
     namespace 'com.example.safesite'
-    compileSdk 33
+  //  compileSdk 33
 
     defaultConfig {
         applicationId "com.example.safesite"
-        minSdk 21
-        targetSdk 33
+        minSdkVersion rootProject.minSdkVersion
+        targetSdkVersion rootProject.targetSdkVersion
         versionCode 1
         versionName "1.0"
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+//        buildConfigField "String", "UNSPLASH_ACCESS_KEY", "\" unsplash_access_key\""
+    //    buildConfigField "String", "UNSPLASH_ACCESS_KEY"
+
+        //  buildConfigField ("String", "UNSPLASH_ACCESS_KEY", unsplash_access_key)
     }
 
     buildTypes {
@@ -39,10 +49,12 @@ android {
     buildFeatures{
         dataBinding true
         viewBinding true
+
     }
 }
 
 dependencies {
+    implementation fileTree(dir: "libs", include: ["*.jar"])
 
     implementation "org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version"
     implementation 'androidx.core:core-ktx:1.9.0'
@@ -104,4 +116,31 @@ dependencies {
    // kapt "androidx.hilt:hilt-compiler:2.28-alpha"
 
     //implementation "androidx.activity:activity-ktx:1.6.1"
+
+    // Dagger Hilt
+    implementation "com.google.dagger:hilt-android:$hiltVersion"
+    kapt "com.google.dagger:hilt-android-compiler:$hiltVersion"
+    implementation "androidx.hilt:hilt-lifecycle-viewmodel:$hiltAndroidXVersion"
+    kapt "androidx.hilt:hilt-compiler:$hiltAndroidXVersion"
+
+
+    // Retrofit + GSON
+    implementation "com.squareup.retrofit2:retrofit:$retrofitVersion"
+    implementation "com.squareup.retrofit2:converter-gson:$retrofitVersion"
+
+    // Glide
+    implementation "com.github.bumptech.glide:glide:4.11.0"
+    annotationProcessor 'com.github.bumptech.glide:compiler:4.14.2'
+    implementation 'jp.wasabeef:glide-transformations:4.3.0'
+
+    // Paging 3
+    implementation "androidx.paging:paging-runtime-ktx:3.1.1"
+
+ //   implementation "androidx.activity:activity:1.3.1"
+  //  implementation "androidx.fragment:fragment-ktx:1.6.0"
+
+}
+
+kapt {
+    correctErrorTypes true
 }

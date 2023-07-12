@@ -5,30 +5,7 @@
     android:id="@+id/mobile_navigation"
     app:startDestination="@+id/loginFragment">
 
-    <fragment
-        android:id="@+id/nav_home"
-        android:name="com.example.safesite.home.HomeFragment"
-        android:label="@string/menu_home"
-        tools:layout="@layout/fragment_home" >
-        <action
-            android:id="@+id/action_nav_home_to_penaltyFragment"
-            app:destination="@id/penaltyFragment" />
-        <action
-            android:id="@+id/action_nav_home_self"
-            app:destination="@id/nav_home" />
-    </fragment>
 
-    <fragment
-        android:id="@+id/faqFragment2"
-        android:name="com.example.safesite.faq.FaqFragment"
-        android:label="@string/menu_faq"
-        tools:layout="@layout/fragment_faq" />
-
-    <fragment
-        android:id="@+id/nav_slideshow"
-        android:name="com.example.safesite.slideshow.SlideshowFragment"
-        android:label="@string/menu_slideshow"
-        tools:layout="@layout/fragment_slideshow" />
     <fragment
         android:id="@+id/loginFragment"
         android:name="com.example.safesite.LoginFragment"
@@ -50,11 +27,46 @@
             android:id="@+id/action_registrationFragment_to_loginFragment"
             app:destination="@id/loginFragment" />
     </fragment>
+
+
+    <fragment
+        android:id="@+id/nav_home"
+        android:name="com.example.safesite.home.HomeFragment"
+        android:label="@string/menu_home"
+        tools:layout="@layout/fragment_home" >
+        <action
+            android:id="@+id/action_nav_home_to_penaltyFragment"
+            app:destination="@id/penaltyFragment" />
+        <action
+            android:id="@+id/action_nav_home_self"
+            app:destination="@id/nav_home" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/faqFragment2"
+        android:name="com.example.safesite.faq.FaqFragment"
+        android:label="@string/menu_faq"
+        tools:layout="@layout/fragment_faq" >
+        <action
+            android:id="@+id/action_faqFragment2_to_settingsFragment"
+            app:destination="@id/settingsFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/nav_slideshow"
+        android:name="com.example.safesite.slideshow.SlideshowFragment"
+        android:label="@string/menu_slideshow"
+        tools:layout="@layout/fragment_slideshow" />
+
     <fragment
         android:id="@+id/aboutFragment"
         android:name="com.example.safesite.about.AboutFragment"
         android:label="fragment_about"
-        tools:layout="@layout/fragment_about" />
+        tools:layout="@layout/fragment_about" >
+        <action
+            android:id="@+id/action_aboutFragment_to_settingsFragment"
+            app:destination="@id/settingsFragment" />
+    </fragment>
     <activity
         android:id="@+id/locationActivity"
         android:name="com.example.safesite.location.LocationActivity"
@@ -156,6 +168,59 @@
         android:name="com.example.safesite.attendance.EditDateActivity"
         android:label="activity_edit_date"
         tools:layout="@layout/activity_edit_date" />
+
+
+
+
+
+
+    <fragment
+        android:id="@+id/galleryFragment"
+        android:name="com.example.safesite.search.gallery.GalleryFragment"
+        android:label="Gallery"
+        tools:layout="@layout/fragment_gallery">
+        <action
+            android:id="@+id/action_galleryFragment_to_detailsFragment2"
+            app:destination="@id/detailsFragment2" />
+    </fragment>
+    <fragment
+        android:id="@+id/detailsFragment2"
+        android:name="com.example.safesite.search.details.DetailsFragment"
+        android:label="Photo"
+        tools:layout="@layout/fragment_details">
+        <argument
+            android:name="photo"
+            app:argType="com.example.safesite.search.data.BirdPhoto" />
+    </fragment>
+    <fragment
+        android:id="@+id/settingsFragment"
+        android:name="com.example.safesite.setting.SettingFragment"
+        android:label="fragment_settings"
+        tools:layout="@layout/fragment_setting" >
+        <action
+            android:id="@+id/action_settingsFragment_to_aboutFragment"
+            app:destination="@id/aboutFragment" />
+        <action
+            android:id="@+id/action_settingsFragment_to_faqFragment2"
+            app:destination="@id/faqFragment2" />
+        <action
+            android:id="@+id/action_settingsFragment_to_nav_home"
+            app:destination="@id/nav_home" />
+    </fragment>
+
+    <!---
+    <fragment
+        android:id="@+id/hilt_GalleryFragment"
+        android:name="com.example.safesite.search.gallery.Hilt_GalleryFragment"
+        android:label="GalleryFragment" >
+        <action
+            android:id="@+id/action_hilt_GalleryFragment_to_detailsFragment2"
+            app:destination="@id/detailsFragment2" />
+    </fragment>
+    -->
+
+
+
     <!--
     <activity
         android:id="@+id/editShoppingListActivity2"
