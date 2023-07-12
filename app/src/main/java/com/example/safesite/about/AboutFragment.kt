@@ -23,10 +23,12 @@ class AboutFragment : Fragment() {
         //return inflater.inflate(R.layout.fragment_about, container, false)
         binding = FragmentAboutBinding.inflate(layoutInflater)
 
+        /*
         binding.aboutBack.setOnClickListener { view: View ->
             view.findNavController().navigate(R.id.action_aboutFragment_to_settingsFragment)
 
         }
+         */
         return binding.root
 
     }

@@ -34,10 +34,12 @@ class SettingFragment : Fragment() {
         binding.aboutFaqButton.setOnClickListener { view: View ->
             view.findNavController().navigate(R.id.action_settingsFragment_to_faqFragment2)
         }
- */
+
         binding.settingsBack.setOnClickListener { view: View ->
             view.findNavController().navigate(R.id.action_settingsFragment_to_nav_home)
         }
+
+ */
         return binding.root
     }
 
